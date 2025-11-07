@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TACOS Technologies Inc. delivers tactical aerospace and drone solutions with precision engineering and intelligent command systems."
+    />
+    <title>TACOS Technologies Inc. | Innovating Aerospace Command</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="./">
+          <img class="brand__logo" src="assets/tacoslogo.png" alt="TACOS Technologies Inc. logo" />
+          <span class="sr-only">TACOS Technologies Inc.</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a class="nav__link" data-nav="home" href="index.html">Home</a></li>
+            <li><a class="nav__link" data-nav="about" href="about.html">About</a></li>
+            <li><a class="nav__link" data-nav="contact" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="container hero__container">
+          <div class="hero__content">
+            <p class="hero__eyebrow">Tactical Aerospace Command &amp; Operations Solutions</p>
+            <h1 class="hero__headline">
+              Innovating the Future of Aerospace and Command Systems
+            </h1>
+            <p class="hero__subhead">
+              We engineer adaptive drone fleets and intelligent command platforms that merge defense-grade reliability with commercial agility.
+            </p>
+            <a class="cta" href="about.html">Explore Our Solutions</a>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <canvas id="droneCanvas" role="img" aria-label="3D model of TACOS drone"></canvas>
+            <svg class="hero__path" viewBox="0 0 400 400" preserveAspectRatio="none">
+              <path
+                class="story-path"
+                d="M20 360 C140 300 160 200 200 200 C240 200 280 240 320 120 C340 60 380 40 380 40"
+                vector-effect="non-scaling-stroke"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="section mission" id="mission">
+        <div class="container">
+          <div class="section__intro reveal">
+            <h2>Mission Objective</h2>
+            <p>
+              We redefine aerial efficiency, safety, and intelligence across Africa by delivering defense-grade drone technology engineered for commercial environments.
+            </p>
+            <p>
+              Our platforms empower logistics, infrastructure, security, and tactical teams with adaptable systems built for the most demanding missions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section features" id="why">
+        <div class="container">
+          <div class="section__intro reveal">
+            <h2>Why Choose TACOS</h2>
+            <p>Precision-built systems that harmonize engineering excellence with real-world mission requirements.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal" tabindex="0">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" role="presentation">
+                  <path d="M8 32 L24 16 L40 32 L24 48 Z" />
+                  <circle cx="24" cy="32" r="6" />
+                </svg>
+              </span>
+              <h3>Precision Engineering</h3>
+              <p>
+                Aerospace-certified craftsmanship with meticulous calibration ensures unwavering performance in extreme conditions.
+              </p>
+            </article>
+            <article class="feature-card reveal" tabindex="0">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" role="presentation">
+                  <rect x="18" y="18" width="28" height="28" rx="8" />
+                  <path d="M32 18 V6 M32 58 V46 M18 32 H6 M58 32 H46" />
+                </svg>
+              </span>
+              <h3>Advanced Drone Systems</h3>
+              <p>
+                Modular autonomous fleets with adaptive payloads deploy rapidly for logistics, inspection, and tactical support.
+              </p>
+            </article>
+            <article class="feature-card reveal" tabindex="0">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" role="presentation">
+                  <path d="M12 44 C22 28 42 28 52 12" />
+                  <circle cx="20" cy="20" r="6" />
+                  <circle cx="44" cy="44" r="6" />
+                </svg>
+              </span>
+              <h3>Data-Driven Command Tech</h3>
+              <p>
+                Intelligence-grade analytics deliver live situational awareness and orchestrated command strategies.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section narrative" id="story">
+        <div class="container narrative__container">
+          <div class="narrative__line" aria-hidden="true">
+            <svg viewBox="0 0 600 600" preserveAspectRatio="none">
+              <path
+                class="story-path"
+                d="M40 520 C120 420 200 380 300 420 C420 470 460 200 560 120"
+                vector-effect="non-scaling-stroke"
+              ></path>
+            </svg>
+          </div>
+          <div class="narrative__content">
+            <article class="narrative__item reveal">
+              <h3>Strategic Vision</h3>
+              <p>
+                TACOS aligns with Africa&rsquo;s emerging aerospace ambitions through industry partnerships and sovereign innovation programs.
+              </p>
+            </article>
+            <article class="narrative__item reveal">
+              <h3>Systems Integration</h3>
+              <p>
+                Our command systems connect airframes, ground teams, and data clouds into one coherent operations network.
+              </p>
+            </article>
+            <article class="narrative__item reveal">
+              <h3>Trusted Execution</h3>
+              <p>
+                Mission teams rely on TACOS for validated flight safety, resilient communications, and responsive support.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__brand">
+          <img class="footer__logo" src="assets/tacoslogo.png" alt="TACOS Technologies Inc. logo" />
+          <span class="sr-only">TACOS Technologies Inc.</span>
+        </div>
+        <div class="footer__info">
+          <a href="mailto:mission@tacostechnologies.com">mission@tacostechnologies.com</a>
+          <span>&copy; <span id="year"></span> TACOS Technologies Inc. All rights reserved.</span>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="X">X</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
