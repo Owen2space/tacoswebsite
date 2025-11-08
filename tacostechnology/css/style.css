@@ -1309,11 +1309,15 @@ canvas {
     grid-template-columns: 1fr;
   }
 
-  .hero__visual,
   .about-hero__visual,
   .contact-hero__media {
     order: -1;
     min-height: 280px;
+  }
+
+  .hero__visual {
+    order: 2;
+    margin-top: 32px;
   }
 
   .feature-grid,
