@@ -267,6 +267,12 @@ canvas {
   pointer-events: none;
 }
 
+.hero__drone img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .hero__path {
   position: absolute;
   inset: 0;
@@ -653,6 +659,12 @@ canvas {
   isolation: isolate;
 }
 
+.about-hero__image picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .about-hero__image img {
   width: 100%;
   height: 100%;
@@ -930,6 +942,12 @@ canvas {
   display: grid;
   position: relative;
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.9) 0%, rgba(230, 234, 241, 0.76) 100%);
+}
+
+.contact-hero__media picture {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .contact-hero__media img {

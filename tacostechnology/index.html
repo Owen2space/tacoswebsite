@@ -101,12 +101,14 @@
             </div>
           </div>
           <div class="hero__visual" aria-hidden="true">
-            <img
-              class="hero__drone"
-              src="assets/drone1.png"
-              alt="TACOS Technologies flagship drone"
-              loading="lazy"
-            />
+            <picture class="hero__drone">
+              <source srcset="assets/drone1.webp" type="image/webp" />
+              <img
+                src="assets/drone1.png"
+                alt="TACOS Technologies flagship drone"
+                loading="lazy"
+              />
+            </picture>
             <canvas id="droneCanvas" role="img" aria-label="3D model of TACOS drone"></canvas>
             <svg class="hero__path" viewBox="0 0 400 400" preserveAspectRatio="none">
               <path
