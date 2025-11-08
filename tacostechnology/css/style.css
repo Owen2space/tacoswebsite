@@ -189,6 +189,18 @@ canvas {
   color: var(--text-soft);
 }
 
+.hero__body {
+  max-width: 540px;
+  font-size: 1.05rem;
+  color: var(--text-soft);
+}
+
+.hero__cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .cta {
   display: inline-flex;
   align-items: center;
@@ -210,6 +222,20 @@ canvas {
   box-shadow: 0 20px 32px rgba(194, 74, 74, 0.34);
 }
 
+.cta--outline {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  box-shadow: none;
+}
+
+.cta--outline:hover,
+.cta--outline:focus-visible {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 20px 32px rgba(194, 74, 74, 0.22);
+}
+
 .hero__visual {
   position: relative;
   aspect-ratio: 1;
@@ -218,12 +244,27 @@ canvas {
   border-radius: var(--radius-large);
   border: 1px solid rgba(215, 219, 228, 0.6);
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 #droneCanvas {
   width: 100%;
   height: 100%;
   border-radius: var(--radius-large);
+  position: relative;
+  z-index: 1;
+}
+
+.hero__drone {
+  position: absolute;
+  top: 12%;
+  left: 8%;
+  width: 84%;
+  max-width: none;
+  z-index: 2;
+  filter: drop-shadow(0 24px 32px rgba(34, 40, 49, 0.24));
+  transform: rotate(-4deg);
+  pointer-events: none;
 }
 
 .hero__path {
@@ -334,6 +375,63 @@ canvas {
   stroke-linejoin: round;
 }
 
+.mission__content {
+  margin-top: 48px;
+  display: grid;
+  gap: 32px;
+}
+
+.mission__panel {
+  background: var(--card);
+  border-radius: var(--radius-medium);
+  padding: 36px;
+  border: 1px solid rgba(215, 219, 228, 0.8);
+  box-shadow: 0 20px 36px rgba(34, 40, 49, 0.08);
+  display: grid;
+  gap: 16px;
+}
+
+.mission__panel h3 {
+  font-size: 1.4rem;
+}
+
+.mission__panel p {
+  color: var(--text-soft);
+}
+
+.mission__list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 8px;
+  padding: 0;
+}
+
+.mission__list li {
+  position: relative;
+  padding-left: 28px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.mission__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(194, 74, 74, 0.8), rgba(194, 74, 74, 0.4));
+  box-shadow: 0 8px 16px rgba(194, 74, 74, 0.3);
+}
+
+@media (min-width: 980px) {
+  .mission__content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .narrative__container {
   position: relative;
   display: grid;
@@ -363,6 +461,45 @@ canvas {
   padding: 32px;
   border: 1px solid rgba(215, 219, 228, 0.8);
   box-shadow: 0 16px 36px rgba(34, 40, 49, 0.08);
+}
+
+.promise {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(246, 247, 251, 0.92) 100%);
+}
+
+.promise .section__intro {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.promise .section__intro p {
+  margin: 0 auto;
+}
+
+.join .container {
+  display: grid;
+  justify-content: center;
+}
+
+.callout-card {
+  background: var(--card);
+  border-radius: var(--radius-large);
+  padding: 48px;
+  border: 1px solid rgba(215, 219, 228, 0.9);
+  box-shadow: 0 28px 52px rgba(34, 40, 49, 0.12);
+  max-width: 720px;
+  text-align: center;
+  display: grid;
+  gap: 24px;
+}
+
+.callout-card p {
+  color: var(--text-soft);
+  font-size: 1.1rem;
+}
+
+.callout-card .hero__cta-group {
+  justify-content: center;
 }
 
 .about-hero__container,
@@ -1173,6 +1310,25 @@ canvas {
   .about-promise__container {
     padding: 64px 24px;
   }
+
+  .hero__drone {
+    top: 10%;
+    left: 6%;
+    width: 88%;
+    transform: rotate(-2.5deg);
+  }
+
+  .hero__cta-group {
+    gap: 12px;
+  }
+
+  .callout-card {
+    padding: 36px 28px;
+  }
+
+  .callout-card .hero__cta-group {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 540px) {
@@ -1244,6 +1400,29 @@ canvas {
 
   .about-promise__container {
     padding: 56px 20px;
+  }
+
+  .callout-card {
+    padding: 32px 24px;
+  }
+
+  .hero__cta-group {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero__cta-group .cta {
+    width: 100%;
+  }
+
+  .callout-card .hero__cta-group {
+    align-items: stretch;
+  }
+
+  .hero__drone {
+    top: 12%;
+    left: 4%;
+    width: 92%;
   }
 }
 
