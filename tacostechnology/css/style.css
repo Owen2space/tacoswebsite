@@ -1294,6 +1294,7 @@ canvas {
   gap: 14px;
 }
 
+
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -1435,6 +1436,7 @@ canvas {
     align-items: flex-start;
     gap: 18px;
   }
+
 }
 
 @media (max-width: 540px) {
