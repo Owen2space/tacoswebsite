@@ -3,6 +3,5 @@ compatibility_date = "2025-11-17"  # update to today’s date
 # type field is not needed for static assets
 # main field is not needed for static assets
 
-[site]
-bucket = "./tacostechnology"
+
 entry-point = "."  # optional, tells Wrangler where to start
