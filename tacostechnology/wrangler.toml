@@ -2,9 +2,8 @@ name = "tacoswebsite"
 compatibility_date = "2025-11-17"
 account_id = "72aa7941e28dad28fc4efabb110dd054"
 
-# Configure as static site
 type = "static"
 
 [site]
-bucket = "."          # current folder contains all HTML/CSS/JS
+bucket = "."          # the folder containing all your HTML/CSS/JS
 entry-point = "."     # same as bucket
