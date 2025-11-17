@@ -1,7 +1,10 @@
 name = "tacoswebsite"
-type = "javascript"
+compatibility_date = "2025-11-17"
+account_id = "72aa7941e28dad28fc4efabb110dd054"
 
-account_id = "72aa7941e28dad28fc4efabb110dd054>"
-workers_dev = true
-route = ""
-zone_id = ""
+# Configure as static site
+type = "static"
+
+[site]
+bucket = "."          # current folder contains all HTML/CSS/JS
+entry-point = "."     # same as bucket
