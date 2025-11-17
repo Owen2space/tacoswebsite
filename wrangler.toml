@@ -1,7 +1,9 @@
 name = "tacoswebsite"
-type = "javascript"  # or "webpack" if using a build system
-
+compatibility_date = "2025-11-17"
 account_id = "72aa7941e28dad28fc4efabb110dd054"
-workers_dev = true
-route = ""
-zone_id = ""
+
+type = "static"
+
+[site]
+bucket = "."          # the folder containing all your HTML/CSS/JS
+entry-point = "."     # same as bucket
