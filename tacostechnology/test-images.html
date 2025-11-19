@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test</title>
+    <style>
+        body { padding: 20px; font-family: sans-serif; }
+        img { max-width: 300px; margin: 10px; border: 2px solid #ccc; }
+        .test { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>Image Path Test</h1>
+    
+    <div class="test">
+        <h2>Test 1: dji-4223416_1920.jpg</h2>
+        <img src="assets/dji-4223416_1920.jpg" alt="Agriculture drone">
+        <p>Path: assets/dji-4223416_1920.jpg</p>
+    </div>
+
+    <div class="test">
+        <h2>Test 2: medium-shot-smiley-woman-with-drone-outside.jpg</h2>
+        <img src="assets/medium-shot-smiley-woman-with-drone-outside.jpg" alt="Woman with drone">
+        <p>Path: assets/medium-shot-smiley-woman-with-drone-outside.jpg</p>
+    </div>
+
+    <div class="test">
+        <h2>Test 3: low-angle-man-watching-drone.jpg</h2>
+        <img src="assets/low-angle-man-watching-drone.jpg" alt="Man watching drone">
+        <p>Path: assets/low-angle-man-watching-drone.jpg</p>
+    </div>
+
+    <div class="test">
+        <h2>Test 4: drone-flying-mountains.jpg</h2>
+        <img src="assets/drone-flying-mountains.jpg" alt="Drone in mountains">
+        <p>Path: assets/drone-flying-mountains.jpg</p>
+    </div>
+
+    <div class="test">
+        <h2>Test 5: Existing working image (drone1.png)</h2>
+        <img src="assets/drone1.png" alt="Drone 1">
+        <p>Path: assets/drone1.png</p>
+    </div>
+
+    <script>
+        // Check if images load
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.onerror = function() {
+                console.error(`Image ${index + 1} failed to load:`, this.src);
+                this.style.border = '2px solid red';
+                this.parentElement.style.background = '#ffeeee';
+            };
+            img.onload = function() {
+                console.log(`Image ${index + 1} loaded successfully:`, this.src);
+                this.style.border = '2px solid green';
+                this.parentElement.style.background = '#eeffee';
+            };
+        });
+    </script>
+</body>
+</html>
